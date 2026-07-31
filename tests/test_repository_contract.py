@@ -66,18 +66,44 @@ class RepositoryContractTests(unittest.TestCase):
             self.assertEqual(digest.hexdigest(), expected_sha256, relative_path)
             self.assertEqual(path.read_bytes()[4:8], b"ftyp", relative_path)
 
-    def test_project_packet_records_verified_media_and_unknown_provenance(self) -> None:
+    def test_project_packet_records_verified_media_and_partial_export_lineage(self) -> None:
         text = read("PROJECT.md")
 
         self.assertIn("348af448e71d53ab94a4aa6b4b6d4ad8b2204057", text)
         self.assertIn("three silent 25-second", text)
         self.assertIn("1920x1080", text)
         self.assertIn("H.264", text)
-        self.assertIn("generating source remains unresolved", text)
+        self.assertIn("Export lineage is partially recovered", text)
+        self.assertIn("plotter-line-drawing-svg", text)
+        self.assertIn(
+            "portrait_markbuild_full_duration_full_contact_25s.mp4",
+            text,
+        )
+        self.assertIn("animation_left_contact_right_svg_reveal_25s.mp4", text)
+        self.assertIn(
+            "d0bb5232b30e8e1ecc57ff5229b1e5fd7a5746ce99d8d61da2fee447c4df040f",
+            text,
+        )
+        self.assertIn(
+            "a7bd0d91aface1ccf123401b1f10a253e24e26fa2b0d34811036c78268ba0676",
+            text,
+        )
+        self.assertIn("fashion export remains unmatched", text)
+        self.assertNotIn("found no duplicate originals", text)
         self.assertIn("GitHub Pages is absent", text)
         self.assertIn("issues/1", text)
         self.assertIn("issues/2", text)
         self.assertIn("issues/3", text)
+
+    def test_domain_docs_distinguish_export_lineage_from_generating_source(self) -> None:
+        context = read("CONTEXT.md")
+        decision = read("docs/adr/0001-treat-mp4s-as-published-media-evidence.md")
+
+        self.assertIn("Recovered Export Lineage", context)
+        self.assertIn("byte-identical export", context)
+        self.assertIn("does not by itself prove reproducibility", context)
+        self.assertIn("partial export lineage", decision)
+        self.assertIn("Generating Source remains unresolved", decision)
 
     def test_active_contracts_do_not_embed_private_machine_paths(self) -> None:
         private_home = "/" + "home/reidsurmeier"
