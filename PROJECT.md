@@ -26,10 +26,22 @@ are enforced by the repository contract test.
 
 ## Custody and reproducibility boundary
 
-The generating source remains unresolved. A local inventory found no duplicate
-originals or project files that could regenerate these exact exports. The
-repository also lacks a source-image provenance record and an explicit
-publication-rights review.
+Export lineage is partially recovered. A cross-repository SHA-256 inventory
+found two byte-identical exports in
+[`plotter-line-drawing-svg`](https://github.com/ReidSurmeier/plotter-line-drawing-svg)
+at its documented `main` commit
+`358a33f91e94658791bdbc3ce0f74a00a7a85b22`:
+
+| Snapshot export | Matching export in `plotter-line-drawing-svg/public_assets/` | SHA-256 |
+| --- | --- | --- |
+| Portrait | `portrait_markbuild_full_duration_full_contact_25s.mp4` | `d0bb5232b30e8e1ecc57ff5229b1e5fd7a5746ce99d8d61da2fee447c4df040f` |
+| Bathroom | `animation_left_contact_right_svg_reveal_25s.mp4` | `a7bd0d91aface1ccf123401b1f10a253e24e26fa2b0d34811036c78268ba0676` |
+
+This establishes exact export custody and a repository relationship. It does
+not establish which source images, transforms, dependency state, or run inputs
+generated those two files. The fashion export remains unmatched. Therefore the
+Generating Source remains unresolved for all three subjects, and the repository
+still lacks source-image provenance and an explicit publication-rights review.
 
 Until that evidence is recovered:
 
@@ -62,8 +74,9 @@ bytes. Secret scanning and GitHub Actions provide additional repository gates.
 ## Next decisions
 
 1. [Issue 1](https://github.com/ReidSurmeier/plotter-image-animations/issues/1):
-   locate and identify the generating project, source imagery, and export
-   process.
+   continue from the recovered portrait/bathroom export lineage to identify
+   exact run inputs and source imagery, and locate the unmatched fashion
+   export.
 2. [Issue 2](https://github.com/ReidSurmeier/plotter-image-animations/issues/2):
    complete a human publication-rights review for the portrait, bathroom, and
    fashion imagery.

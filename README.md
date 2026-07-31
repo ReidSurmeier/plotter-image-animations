@@ -22,6 +22,11 @@ Each export uses a white 1920x1080 layout: a progressive mark build appears on
 the left and a plate/contact sheet appears on the right. The subjects are a
 portrait, a bathroom scene, and a fashion image.
 
+The portrait and bathroom files are byte-identical to named exports in
+[`plotter-line-drawing-svg`](https://github.com/ReidSurmeier/plotter-line-drawing-svg).
+That recovers part of their export lineage, but it does not identify the exact
+source images, transforms, or run inputs. The fashion export is still unmatched.
+
 Do not recompress, rename, or replace these files until the generating source
 and publication rights have been identified. Byte-level tests intentionally
 fail if the published snapshot changes.

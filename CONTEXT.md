@@ -33,6 +33,13 @@ The project files, source imagery, transforms, scripts, dependencies, and
 export settings needed to reproduce an Animation Export. The Generating Source
 for this snapshot has not been located.
 
+### Recovered Export Lineage
+
+A byte-identical export found in another documented repository. Recovered
+Export Lineage proves custody of an output and a repository relationship; it
+does not by itself prove reproducibility or identify the source image, run
+inputs, transforms, or dependency state that generated the output.
+
 ### Publication Rights
 
 The documented authority to distribute the source imagery and derived
@@ -49,6 +56,7 @@ runtime or deployment.
 
 - The three Animation Exports retain their recorded byte sizes and SHA-256
   hashes.
+- Recovered Export Lineage is distinguished from complete Generating Source.
 - Missing Generating Source is stated as an unresolved custody fact.
 - Publication Rights are reviewed by a human before expanding distribution.
 - No runtime, Pages, Droplet, or Pugnet ownership is inferred from the presence

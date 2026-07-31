@@ -10,6 +10,11 @@ source-image provenance, dependency record, or export instructions. The files
 can be inspected and verified byte-for-byte, but they cannot currently be
 regenerated from repository contents.
 
+Later cross-repository fixity checks recovered partial export lineage: the
+portrait and bathroom MP4s are byte-identical to named public assets in
+`plotter-line-drawing-svg`. The fashion export remains unmatched. Those matches
+identify preserved output copies, not the source imagery or exact run inputs.
+
 Replacing or recompressing them would destroy the only local evidence of the
 published outputs. Conversely, describing them as reproducible would overstate
 what the repository proves.
@@ -20,7 +25,9 @@ Treat the three MP4s as an immutable Published Media Snapshot:
 
 - record and test exact byte sizes and SHA-256 hashes;
 - preserve them without transformation;
-- state that Generating Source and Publication Rights remain unresolved; and
+- record byte-identical output lineage as additive evidence;
+- state that Generating Source remains unresolved despite partial export
+  lineage, and that Publication Rights remain unresolved; and
 - keep runtime and deployment ownership explicitly set to none.
 
 Recovered source or rights evidence must be added and reviewed before changing
