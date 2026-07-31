@@ -1,0 +1,24 @@
+schema_version = 1
+project = "plotter-image-animations"
+classification = "published-media-snapshot"
+context_document = "CONTEXT.md"
+project_document = "PROJECT.md"
+decision_directory = "docs/adr"
+issue_tracker = "github"
+deployment_ownership = "none"
+reproducible = false
+
+[[artifacts]]
+path = "animations/01-portrait-markbuild-full-contact-25s.mp4"
+bytes = 8286219
+sha256 = "d0bb5232b30e8e1ecc57ff5229b1e5fd7a5746ce99d8d61da2fee447c4df040f"
+
+[[artifacts]]
+path = "animations/02-bathroom-svg-reveal-25s.mp4"
+bytes = 3097091
+sha256 = "a7bd0d91aface1ccf123401b1f10a253e24e26fa2b0d34811036c78268ba0676"
+
+[[artifacts]]
+path = "animations/03-fashion-markbuild-full-contact-25s.mp4"
+bytes = 9713253
+sha256 = "fe4c716b0d7dd629b10a35f9ab874ee78413bcdce91557263f13b97f27c19a24"

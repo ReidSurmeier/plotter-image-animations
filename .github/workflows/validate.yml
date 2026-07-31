@@ -1,0 +1,20 @@
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  repository-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Run repository contract tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Compile tests
+        run: python3 -m compileall -q tests
