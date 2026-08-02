@@ -40,16 +40,34 @@ at its documented `main` commit
 This establishes exact export custody and a repository relationship. It does
 not establish which source images, transforms, dependency state, or run inputs
 generated those two files. The fashion export remains unmatched. Therefore the
-Generating Source remains unresolved for all three subjects, and the repository
-still lacks source-image provenance and an explicit publication-rights review.
+Generating Source remains unresolved for all three subjects.
 
 Until that evidence is recovered:
 
 - preserve the three MP4s byte-for-byte;
 - do not claim the exports are reproducible;
-- do not infer licenses or publication rights from public Git visibility; and
+- do not infer broader licenses or source provenance from public Git visibility;
+  and
 - record newly recovered source as additive evidence before proposing changes
   to the snapshot.
+
+## Publication authorization
+
+On 2026-08-02, the repository owner confirmed that they own or are authorized
+to publish the three represented source images and all three current Animation
+Exports. Continued public distribution of the unchanged snapshot is therefore
+authorized. No attribution requirement, distribution limitation, or takedown
+action was identified in that review.
+The authorization covers all three current Animation Exports.
+
+This is a human authorization record, not recovered Generating Source. The
+Generating Source remains unresolved, the exact underlying image identities
+are not inferred here, and this authorization does not extend to replacement
+media or a new delivery surface without separate review.
+
+ADR 0002 permits a custody-only relocation when the Git commit and all three
+media hashes are verified before and after the move. Relocation does not close
+the source-provenance issue or make the exports reproducible.
 
 ## Runtime and deployment ownership
 
@@ -77,9 +95,8 @@ bytes. Secret scanning and GitHub Actions provide additional repository gates.
    continue from the recovered portrait/bathroom export lineage to identify
    exact run inputs and source imagery, and locate the unmatched fashion
    export.
-2. [Issue 2](https://github.com/ReidSurmeier/plotter-image-animations/issues/2):
-   complete a human publication-rights review for the portrait, bathroom, and
-   fashion imagery.
+2. [Issue 2](https://github.com/ReidSurmeier/plotter-image-animations/issues/2)
+   records the completed 2026-08-02 human publication-authorization review.
 3. [Issue 3](https://github.com/ReidSurmeier/plotter-image-animations/issues/3):
    decide whether GitHub Releases or another durable media surface should
    supplement raw repository delivery after provenance is established.

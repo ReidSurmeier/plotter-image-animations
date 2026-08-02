@@ -44,7 +44,10 @@ inputs, transforms, or dependency state that generated the output.
 
 The documented authority to distribute the source imagery and derived
 Animation Exports. Public repository visibility is not proof of Publication
-Rights.
+Rights. On 2026-08-02, the repository owner confirmed that they own or are
+authorized to publish all three current Animation Exports.
+The Generating Source remains unresolved. The authorization does not establish
+source identity or a general license for replacement media.
 
 ### Deployment Owner
 
@@ -58,10 +61,12 @@ runtime or deployment.
   hashes.
 - Recovered Export Lineage is distinguished from complete Generating Source.
 - Missing Generating Source is stated as an unresolved custody fact.
-- Publication Rights are reviewed by a human before expanding distribution.
+- The 2026-08-02 authorization covers continued distribution of the unchanged
+  snapshot; replacement media or expanded distribution requires a new review.
 - No runtime, Pages, Droplet, or Pugnet ownership is inferred from the presence
   of public media.
 
 ## Decision records
 
 - `docs/adr/0001-treat-mp4s-as-published-media-evidence.md`
+- `docs/adr/0002-accept-owner-publication-authorization.md`

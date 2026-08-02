@@ -34,6 +34,7 @@ class RepositoryContractTests(unittest.TestCase):
             "CONTEXT.md",
             "context.toml",
             "docs/adr/0001-treat-mp4s-as-published-media-evidence.md",
+            "docs/adr/0002-accept-owner-publication-authorization.md",
             "docs/agents/domain.md",
             "docs/agents/issue-tracker.md",
             "docs/agents/triage-labels.md",
@@ -104,6 +105,20 @@ class RepositoryContractTests(unittest.TestCase):
         self.assertIn("does not by itself prove reproducibility", context)
         self.assertIn("partial export lineage", decision)
         self.assertIn("Generating Source remains unresolved", decision)
+
+    def test_current_publication_authorization_is_recorded_without_overclaiming_source(self) -> None:
+        project = read("PROJECT.md")
+        context = read("CONTEXT.md")
+        decision = read("docs/adr/0002-accept-owner-publication-authorization.md")
+
+        for text in (project, context, decision):
+            self.assertIn("2026-08-02", text)
+            self.assertIn("authorized", text)
+            self.assertIn("Generating Source remains unresolved", text)
+
+        self.assertIn("all three current Animation Exports", project)
+        self.assertIn("does not authorize replacement media", decision)
+        self.assertIn("custody-only relocation", decision)
 
     def test_active_contracts_do_not_embed_private_machine_paths(self) -> None:
         private_home = "/" + "home/reidsurmeier"

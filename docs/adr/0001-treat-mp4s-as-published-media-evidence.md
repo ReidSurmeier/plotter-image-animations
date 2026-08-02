@@ -2,6 +2,7 @@
 
 - Status: Accepted
 - Date: 2026-07-31
+- Amended by: ADR 0002 on 2026-08-02
 
 ## Context
 
@@ -39,3 +40,7 @@ The repository has a meaningful validation gate despite having no application
 runtime. Accidental binary replacement fails tests. Future contributors can
 distinguish published evidence from reproducible source, while follow-up work
 remains visible rather than being guessed into the documentation.
+
+ADR 0002 later records the owner's publication authorization. The Generating
+Source remains unresolved, so the reproducibility and byte-preservation parts
+of this decision remain unchanged.
