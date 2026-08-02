@@ -26,10 +26,13 @@ The portrait and bathroom files are byte-identical to named exports in
 [`plotter-line-drawing-svg`](https://github.com/ReidSurmeier/plotter-line-drawing-svg).
 That recovers part of their export lineage, but it does not identify the exact
 source images, transforms, or run inputs. The fashion export is still unmatched.
+On 2026-08-02, the repository owner confirmed that they own or are authorized
+to publish all three current Animation Exports. The Generating Source remains
+unresolved despite that publication authorization.
 
-Do not recompress, rename, or replace these files until the generating source
-and publication rights have been identified. Byte-level tests intentionally
-fail if the published snapshot changes.
+Do not recompress, rename, or replace these files until the Generating Source
+has been identified and a replacement is separately reviewed. Byte-level tests
+intentionally fail if the published snapshot changes.
 
 ## Repository guide
 
